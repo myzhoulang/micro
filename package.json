@@ -1,0 +1,14 @@
+{
+  "name": "micro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm-run-all --parallel start:*",
+    "start:master": "cd master && npm run start",
+    "start:umi": "cd umi && npm run start",
+    "start:vue2": "cd vue2 && npm run  serve"
+  },
+  "author": "",
+  "license": "ISC"
+}
