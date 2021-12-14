@@ -1,15 +1,19 @@
 <template>
   <div class="hello">
     <h1>Bar</h1>
+    <button @click="$store.commit('increment')">add</button>
+    <p>age: {{age}}</p>
   </div>
 </template>
 
 <script>
+import {mapState } from 'vuex'
 export default {
   name: "Bar",
   props: {
     msg: String,
   },
+  computed: mapState(['age']),
 };
 </script>
 

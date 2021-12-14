@@ -19,14 +19,14 @@ export default {
 
 <style>
 body{
-  background: pink;
+  color: #000;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
   margin-top: 60px;
+  padding: 30px;
 }
 li{
   list-style: none;
