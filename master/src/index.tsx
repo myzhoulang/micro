@@ -1,10 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { registerMicroApps, start, setDefaultMountApp } from "qiankun";
-import actions, { state } from "./store";
-import "./index.css";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { registerMicroApps, start, setDefaultMountApp } from 'qiankun';
+import actions, { state } from './store';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -22,7 +22,7 @@ ReactDOM.render(
 
     <button onClick={() => actions.setGlobalState({ age: 61 })}>Change</button>
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById('root'),
 );
 
 // 注册
@@ -37,20 +37,22 @@ registerMicroApps([
   //   },
   // },
   {
-    name: "vue2",
-    entry: "//localhost:8001",
-    container: "#container",
-    activeRule: "/vue2",
+    name: 'vue2',
+    // entry: 'http://192.168.21.104:9001/',
+    entry: '//localhost:8001',
+    container: '#container',
+    activeRule: '/vue2',
     props: {
       state,
     },
   },
 
   {
-    name: "umi",
-    entry: "//localhost:8002",
-    container: "#container",
-    activeRule: "/umi",
+    name: 'umi',
+    // entry: 'http://192.168.21.104:9002/',
+    entry: '//localhost:8002',
+    container: '#container',
+    activeRule: '/umi',
     props: {
       state,
     },

@@ -12,7 +12,15 @@
     "start": "npm-run-all --parallel start:*",
     "start:master": "cd master && npm run start",
     "start:umi": "cd umi && npm run start",
-    "start:vue2": "cd vue2 && npm run  serve"
+    "start:vue2": "cd vue2 && npm run serve",
+    "build:vue2": "cd vue2 && npm run build",
+    "build:umi": "cd umi && npm run build",
+    "build:master": "cd master && npm run build",
+    "build": "npm-run-all --parallel build:*",
+    "preview:vue2": "cd vue2/dist && http-server . --cors -p 9001",
+    "preview:umi": "cd umi/dist && http-server . --cors -p 9002",
+    "preview:master": "cd master/build && http-server . --cors -p 9000",
+    "preview": "npm-run-all preview:*"
   },
   "author": "",
   "license": "ISC",
