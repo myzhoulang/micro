@@ -1,6 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
 import './App.css';
+
+let LoginPage = function () {
+  return <h2>父应用的 登录页面</h2>;
+};
 
 function App() {
   return (
@@ -26,8 +30,16 @@ function App() {
             <li>
               <Link to="/cumi">UMI</Link>
             </li>
+            <li>
+              <Link to="/login">login</Link>
+            </li>
           </ul>
         </nav>
+        <Switch>
+          <Route path="/login" component={LoginPage}>
+            {' '}
+          </Route>
+        </Switch>
         <div id="container"></div>
       </div>
     </Router>

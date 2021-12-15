@@ -86,10 +86,19 @@ registerMicroApps(
   ],
   {
     beforeLoad() {
+      console.log('beforeLoad');
       return new Promise((resolve, reject) => {
+        // 获取登录信息
         setTimeout(() => {
           resolve(true);
-        }, 5000);
+        }, 1000);
+      });
+    },
+    beforeMount() {
+      console.log('beforeMount');
+      return new Promise((resolve, reject) => {
+        // 获取登录信息
+        resolve(true);
       });
     },
   },
