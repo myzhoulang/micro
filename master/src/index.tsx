@@ -39,8 +39,8 @@ registerMicroApps(
     // },
     {
       name: 'vue2',
-      entry: 'http://localhost:9001/',
-      // entry: '//localhost:8001',
+      // entry: 'http://localhost:9001/',
+      entry: '//localhost:8001',
       container: '#container',
       activeRule: '/cvue2',
       props: {
@@ -50,39 +50,14 @@ registerMicroApps(
 
     {
       name: 'umi',
-      entry: 'http://localhost:9002/',
-      // entry: '//localhost:8002',
+      // entry: 'http://localhost:9002/',
+      entry: '//localhost:8002',
       container: '#container',
       activeRule: '/cumi',
       props: {
         state,
       },
     },
-
-    // {
-    //   name: "app2",
-    //   entry: "//localhost:8004",
-    //   container: "#container",
-    //   activeRule: "/app2",
-    //   props: {
-    //     state,
-    //   },
-    // },
-    // {
-    //   name: "app3",
-    //   entry: "//localhost:8003",
-    //   container: "#container",
-    //   activeRule: "/app3",
-    //   props: {
-    //     state,
-    //   },
-    // },
-    // {
-    //   name: "fina",
-    //   entry: "http://dev.geelytravel.cn/tmc/#/financial-center/work-table/list",
-    //   container: "#container",
-    //   activeRule: "fina",
-    // },
   ],
   {
     beforeLoad() {

@@ -1,4 +1,4 @@
-// import { useModel } from 'umi';
+import { useModel } from 'umi';
 import { changeState } from '../actions';
 import styles from './index.less';
 
@@ -9,26 +9,28 @@ export default function IndexPage() {
   //   setAge: model.setAge,
   // }));
 
-  // const {
-  //   initialState = {},
-  //   loading,
-  //   error,
-  //   refresh,
-  //   setInitialState,
-  // } = useModel('@@initialState');
+  const {
+    initialState = {},
+    loading,
+    error,
+    refresh,
+    setInitialState,
+  } = useModel('@@initialState');
   return (
     <div>
       <h2>UMI</h2>
-      {/* <p>age: {initialState?.state?.age}</p> */}
+      <p>age: {initialState?.state?.age}</p>
 
       <button
         onClick={() => {
           changeState({ age: 10 });
-          // setInitialState({ state: { age: 10 } });
+          setInitialState({ state: { age: 10 } });
         }}
       >
-        1111
+        btn
       </button>
+
+      {initialState?.state?.age}
       <p className={styles.title}>Page index</p>
     </div>
   );

@@ -18,8 +18,8 @@ export const qiankun = {
 };
 
 
-// export function getInitialState() {
-//   return {
-//     state: initState,
-//   };
-// }
+export function getInitialState() {
+  return {
+    state: initState,
+  };
+}
