@@ -12,9 +12,9 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
-  externals: {
-    antd: 'window.antd',
-  },
+  // externals: {
+  //   antd: 'window.antd',
+  // },
   qiankun: {
     slave: {},
   },

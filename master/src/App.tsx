@@ -1,6 +1,6 @@
-import React from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
-import "./App.css";
+import React from 'react';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
+import './App.css';
 
 function App() {
   return (
@@ -21,10 +21,10 @@ function App() {
               <Link to="/app3">app3</Link>
             </li> */}
             <li>
-              <Link to="/vue2">vue2</Link>
+              <Link to="/cvue2">vue2</Link>
             </li>
             <li>
-              <Link to="/umi">UMI</Link>
+              <Link to="/cumi">UMI</Link>
             </li>
           </ul>
         </nav>

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h2>Vue2</h2>
+    <h2>Vue2 新版本了</h2>
     <ul>
       <li><router-link :to="{path: '/foo'}">foo</router-link></li>
       <li><router-link :to="{path: 'bar'}">bar</router-link></li>
