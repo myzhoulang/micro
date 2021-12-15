@@ -6,6 +6,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+console.log(process.env);
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
@@ -25,22 +27,25 @@ ReactDOM.render(
   document.getElementById('root'),
 );
 
+const { NODE_ENV } = process.env;
+
+// const envs = {
+//   vue2: {
+//     development: {
+//       entry:
+//     },
+//   },
+// };
+
 // 注册
 registerMicroApps(
   [
-    // {
-    //   name: "app1",
-    //   entry: "//localhost:8005",
-    //   container: "#container",
-    //   activeRule: "/app1",
-    //   props: {
-    //     state,
-    //   },
-    // },
     {
       name: 'vue2',
-      // entry: 'http://localhost:9001/',
-      entry: '//localhost:8001',
+      entry:
+        NODE_ENV === 'development'
+          ? '//localhost:8001'
+          : 'http://localhost:9001/',
       container: '#container',
       activeRule: '/cvue2',
       props: {
@@ -51,7 +56,11 @@ registerMicroApps(
     {
       name: 'umi',
       // entry: 'http://localhost:9002/',
-      entry: '//localhost:8002',
+      entry:
+        NODE_ENV === 'development'
+          ? '//localhost:8002'
+          : 'http://localhost:9002/',
+
       container: '#container',
       activeRule: '/cumi',
       props: {

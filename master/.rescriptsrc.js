@@ -1,3 +1,12 @@
+const {
+  getWebpackPlugin,
+  appendWebpackPlugin,
+  editWebpackPlugin,
+  replaceWebpackPlugin,
+  removeWebpackPlugin,
+} = require('@rescripts/utilities');
+const { JsxFlags } = require('typescript');
+const webpack = require('webpack')
 const { name } = require('./package');
 
 module.exports = {
@@ -12,9 +21,14 @@ module.exports = {
       'react': 'React',
       'react-dom': 'ReactDOM'
     }
-
-
-    return config;
+  
+    // const a = editWebpackPlugin((p) => {
+    //   console.log(p)
+    //   sxFlags.dd
+    //   return p
+    // },'DefinePlugin', config)
+    // return a;
+    return config
   },
 
   // devServer: (_) => {
