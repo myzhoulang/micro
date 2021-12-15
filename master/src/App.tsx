@@ -35,11 +35,12 @@ function App() {
             </li>
           </ul>
         </nav>
-        <Switch>
-          <Route path="/login" component={LoginPage}>
-            {' '}
-          </Route>
-        </Switch>
+        <div>
+          <Switch>
+            <Route path="/login" component={LoginPage}></Route>
+          </Switch>
+        </div>
+
         <div id="container"></div>
       </div>
     </Router>
