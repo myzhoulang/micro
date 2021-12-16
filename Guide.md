@@ -30,7 +30,8 @@
 * [single-sap](https://single-spa.js.org/)
 
 ## 构建部署
-
+* nginx 转发
+* docker 镜像
 
 ## 其他
 [官网常见问题](https://qiankun.umijs.org/zh/faq)
