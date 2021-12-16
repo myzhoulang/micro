@@ -1,4 +1,5 @@
 import { useModel } from 'umi';
+import { Button } from 'antd';
 import { changeState } from '../actions';
 import styles from './index.less';
 
@@ -21,14 +22,15 @@ export default function IndexPage() {
       <h2>UMI</h2>
       <p>age: {initialState?.state?.age}</p>
 
-      <button
+      <Button
+        type="primary"
         onClick={() => {
           changeState({ age: 10 });
           setInitialState({ state: { age: 10 } });
         }}
       >
         btn
-      </button>
+      </Button>
 
       {initialState?.state?.age}
       <p className={styles.title}>Page index</p>

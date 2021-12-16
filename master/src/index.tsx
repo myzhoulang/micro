@@ -1,12 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { registerMicroApps, start, setDefaultMountApp } from 'qiankun';
+import {
+  registerMicroApps,
+  start,
+  addGlobalUncaughtErrorHandler,
+} from 'qiankun';
 import actions, { state } from './store';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 console.log(process.env);
+// @ts-ignore
+window.b = 123;
 
 ReactDOM.render(
   <React.StrictMode>
@@ -88,7 +94,12 @@ registerMicroApps(
   },
 );
 
+// start({ sandbox: false });
 start();
+
+addGlobalUncaughtErrorHandler(function (event) {
+  console.log(event);
+});
 
 // setDefaultMountApp("/app1");
 // If you want to start measuring performance in your app, pass a function

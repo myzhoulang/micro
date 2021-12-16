@@ -15,13 +15,17 @@ export default defineConfig({
     type: 'none',
   },
   externals: {
-    antd: 'window.antd', 
+    moment: 'moment',
+    antd: 'antd', 
     'react': 'React',
     'react-dom': 'ReactDOM'
   },
   qiankun: {
     slave: {},
   },
+  antd: false,
+  request: false,
+  analytics:false,
   routes: [{ path: '/', component: '@/pages/index' }],
   fastRefresh: {},
 });

@@ -12,14 +12,18 @@ Vue.config.productionTip = false;
 Vue.use(VueRouter);
 Vue.use(Vuex);
 
-console.log('>>>', window.__INJECTED_PUBLIC_PATH_BY_QIANKUN__);
 
 let router = null;
 let instance = null;
 let store = {};
 
 function render(props = {}) {
-  console.log(window.__POWERED_BY_QIANKUN__);
+  console.log('[vue2] __INJECTED_PUBLIC_PATH_BY_QIANKUN__ =',window.__INJECTED_PUBLIC_PATH_BY_QIANKUN__);
+  // window.a = 1123
+
+  // console.error('error')
+  // error
+  // window.a.config
 
   const { container } = props;
   router = new VueRouter({
